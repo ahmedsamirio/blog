@@ -1,1 +1,1 @@
-Sitemap: https://ahmedsamirio.github.io/samirio/sitemap.xml
+Sitemap: https://ahmedsamirio.github.io/blog/sitemap.xml
