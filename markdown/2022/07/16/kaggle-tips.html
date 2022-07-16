@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="What I Learned From My First Serious Kaggle Competition" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Relfections and lessons I learned while participating in kaggle" />
-<meta property="og:description" content="Relfections and lessons I learned while participating in kaggle" />
+<meta name="description" content="Relfections and lessons I learned while participating in UW-Madison GI Tract Segmentation competition." />
+<meta property="og:description" content="Relfections and lessons I learned while participating in UW-Madison GI Tract Segmentation competition." />
 <link rel="canonical" href="https://ahmedsamirio.github.io/blog/markdown/2022/07/16/kaggle-tips.html" />
 <meta property="og:url" content="https://ahmedsamirio.github.io/blog/markdown/2022/07/16/kaggle-tips.html" />
 <meta property="og:site_name" content="ahmedsamirio" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="What I Learned From My First Serious Kaggle Competition" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-16T00:00:00-05:00","datePublished":"2022-07-16T00:00:00-05:00","description":"Relfections and lessons I learned while participating in kaggle","headline":"What I Learned From My First Serious Kaggle Competition","mainEntityOfPage":{"@type":"WebPage","@id":"https://ahmedsamirio.github.io/blog/markdown/2022/07/16/kaggle-tips.html"},"url":"https://ahmedsamirio.github.io/blog/markdown/2022/07/16/kaggle-tips.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-07-16T00:00:00-05:00","datePublished":"2022-07-16T00:00:00-05:00","description":"Relfections and lessons I learned while participating in UW-Madison GI Tract Segmentation competition.","headline":"What I Learned From My First Serious Kaggle Competition","mainEntityOfPage":{"@type":"WebPage","@id":"https://ahmedsamirio.github.io/blog/markdown/2022/07/16/kaggle-tips.html"},"url":"https://ahmedsamirio.github.io/blog/markdown/2022/07/16/kaggle-tips.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ahmedsamirio.github.io/blog/feed.xml" title="ahmedsamirio" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,7 +73,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">What I Learned From My First Serious Kaggle Competition</h1><p class="page-description">Relfections and lessons I learned while participating in kaggle</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-07-16T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">What I Learned From My First Serious Kaggle Competition</h1><p class="page-description">Relfections and lessons I learned while participating in UW-Madison GI Tract Segmentation competition.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-07-16T00:00:00-05:00" itemprop="datePublished">
         Jul 16, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -96,22 +96,27 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a>
+<li class="toc-entry toc-h1"><a href="#introduction">Introduction</a></li>
+<li class="toc-entry toc-h1"><a href="#what-i-learned">What I learned</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#make-notebook-templates-to-store-your-code-in-an-organized-way">Make notebook templates to store your code in an organized way</a></li>
-<li class="toc-entry toc-h3"><a href="#package-the-code-that-you-have-tested-to-enable-using-it-in-multiple-places">Package the code that you have tested to enable using it in multiple places</a></li>
-<li class="toc-entry toc-h3"><a href="#develop-a-robust-validation-plan">Develop a robust validation plan</a></li>
-<li class="toc-entry toc-h3"><a href="#keep-a-log-to-track-what-you-did-on-a-daily-basis">Keep a log to track what you did on a daily basis</a></li>
-<li class="toc-entry toc-h3"><a href="#keep-a-list-of-any-improvement-and-ideas-that-come-to-mind-or-that-you-have-read-which-you-can-try">Keep a list of any improvement and ideas that come to mind or that you have read which you can try</a></li>
-<li class="toc-entry toc-h3"><a href="#keep-a-list-of-any-problem-that-faces-you-and-prioritize-solving-them">Keep a list of any problem that faces you and prioritize solving them</a></li>
-<li class="toc-entry toc-h3"><a href="#keep-a-list-of-the-things-that-you-need-to-educate-yourself-about">Keep a list of the things that you need to educate yourself about</a></li>
-<li class="toc-entry toc-h3"><a href="#make-a-plan-based-on-the-three-lists-that-you-have-for-what-you-should-be-doing-in-the-next-x-days">Make a plan based on the three lists that you have for what you should be doing in the next X days</a></li>
+<li class="toc-entry toc-h2"><a href="#make-notebook-templates-to-store-your-code-in-an-organized-way">Make notebook templates to store your code in an organized way</a></li>
+<li class="toc-entry toc-h2"><a href="#package-the-code-that-you-have-tested-to-enable-using-it-in-multiple-places">Package the code that you have tested to enable using it in multiple places</a></li>
+<li class="toc-entry toc-h2"><a href="#develop-a-robust-validation-plan">Develop a robust validation plan</a></li>
+<li class="toc-entry toc-h2"><a href="#keep-a-log-to-track-what-you-did-on-a-daily-basis">Keep a log to track what you did on a daily basis</a></li>
+<li class="toc-entry toc-h2"><a href="#keep-a-list-of-any-improvement-and-ideas-that-come-to-mind-or-that-you-have-read-which-you-can-try">Keep a list of any improvement and ideas that come to mind or that you have read which you can try</a></li>
+<li class="toc-entry toc-h2"><a href="#keep-a-list-of-any-problem-that-faces-you-and-prioritize-solving-them">Keep a list of any problem that faces you and prioritize solving them</a></li>
+<li class="toc-entry toc-h2"><a href="#keep-a-list-of-the-things-that-you-need-to-educate-yourself-about">Keep a list of the things that you need to educate yourself about</a></li>
+<li class="toc-entry toc-h2"><a href="#make-a-plan-based-on-the-three-lists-that-you-have-for-what-you-should-be-doing-in-the-next-x-days">Make a plan based on the three lists that you have for what you should be doing in the next X days</a>
+<ul>
 <li class="toc-entry toc-h3"><a href="#set-a-daily-time-to-scan-through-new-notebooks-and-discussions-for-any-new-ideas-or-information-and-jot-them-down-in-your-log-and-lists-accordingly">Set a daily time to scan through new notebooks and discussions for any new ideas or information and jot them down in your log and lists accordingly</a></li>
-<li class="toc-entry toc-h3"><a href="#believe-in-yourself">Believe in yourself</a></li>
 </ul>
 </li>
-</ul><h2 id="introduction">
-<a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+<li class="toc-entry toc-h2"><a href="#believe-in-yourself">Believe in yourself</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#tldr">TL;DR</a></li>
+</ul><h1 id="introduction">
+<a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h1>
 
 <p>Recently I decided that I want to be a Kaggle grand-master, and so I set it out to achieve this goal by breaking it down into multiple steps, the first of which was to win 3 medals (not necessarily gold) by the end of this year.</p>
 
@@ -125,29 +130,15 @@ window.onload = wrap_img;
   <li>The amount of things that I want to learn</li>
 </ol>
 
+<h1 id="what-i-learned">
+<a class="anchor" href="#what-i-learned" aria-hidden="true"><span class="octicon octicon-link"></span></a>What I learned</h1>
+
 <p>So along this way, I came up with a system that isn’t perfect, but currently suits the job.</p>
 
 <p>Also, once the competition finished, I reflected upon this experience to extract some lessons to help me win more competitions, and hopefully you too.</p>
 
-<p>These are the bullet points that I’ll discuss.</p>
-
-<ol>
-  <li>Make notebook templates to store your code in an organized way.</li>
-  <li>Package the code that you have tested to enable using it in multiple places.</li>
-  <li>Explore and develop and robust CV</li>
-  <li>Keep a log to track what you did on a daily basis</li>
-  <li>Keep a list of any improvement and ideas that come to mind or that you have read which you can try</li>
-  <li>Keep a list of any problem that faces you and prioritize solving them</li>
-  <li>Keep a list of the things that you need to educate yourself about</li>
-  <li>Begin everyday by reviewing the log to motivate yourself about the stuff that you have already worked on</li>
-  <li>Always make a plan based on the three lists that you have for what you should be doing in the next 3 days for example to avoid feeling distracted by all the information</li>
-  <li>Set a daily time to scan through new notebooks and discussions for any new ideas or information and jot them down in your log and lists accordingly</li>
-  <li>Don’t watch your models train</li>
-  <li>Last but not least, believe in yourself.</li>
-</ol>
-
-<h3 id="make-notebook-templates-to-store-your-code-in-an-organized-way">
-<a class="anchor" href="#make-notebook-templates-to-store-your-code-in-an-organized-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make notebook templates to store your code in an organized way</h3>
+<h2 id="make-notebook-templates-to-store-your-code-in-an-organized-way">
+<a class="anchor" href="#make-notebook-templates-to-store-your-code-in-an-organized-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make notebook templates to store your code in an organized way</h2>
 
 <p>Through out a competition you’ll need 4 kinds of notebooks</p>
 
@@ -160,8 +151,8 @@ window.onload = wrap_img;
 
 <p>Why do I think you need 4 notebooks? Well not exactly 4, it’s not carved on stone, but you need to organize your code in way that enables you to iterate quickly, and if all of your work is in just one notebook, you’ll find yourself distracted by the different parts you have in there. And whenever you try to reach a part or track something that you’ve written before, it’ll be a nightmare.</p>
 
-<h3 id="package-the-code-that-you-have-tested-to-enable-using-it-in-multiple-places">
-<a class="anchor" href="#package-the-code-that-you-have-tested-to-enable-using-it-in-multiple-places" aria-hidden="true"><span class="octicon octicon-link"></span></a>Package the code that you have tested to enable using it in multiple places</h3>
+<h2 id="package-the-code-that-you-have-tested-to-enable-using-it-in-multiple-places">
+<a class="anchor" href="#package-the-code-that-you-have-tested-to-enable-using-it-in-multiple-places" aria-hidden="true"><span class="octicon octicon-link"></span></a>Package the code that you have tested to enable using it in multiple places</h2>
 
 <p>Now say that you have written some code and organized it into functions or classes, does it make sense to keep copying it around all of your notebooks?</p>
 
@@ -169,10 +160,10 @@ window.onload = wrap_img;
 
 <p>That doesn’t make any sense. What makes sense is that you package any code that you have written and tested into a local package, and maybe you can even upload that package as a dataset, so whenever you are switching over to kaggle notebooks, you know that your functions will be there too without copying and pasting anything.</p>
 
-<h3 id="develop-a-robust-validation-plan">
-<a class="anchor" href="#develop-a-robust-validation-plan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Develop a robust validation plan</h3>
+<h2 id="develop-a-robust-validation-plan">
+<a class="anchor" href="#develop-a-robust-validation-plan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Develop a robust validation plan</h2>
 
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/551f6243-ac38-4550-8218-300ceea8d86d/Untitled.png" alt="Untitled"></p>
+<p><img src="https://www.datasciencecentral.com/wp-content/uploads/2021/10/CV_vs_LB.png" alt="cv-lb-score"></p>
 
 <p>What good are your ideas if you can’t test them? If you don’t have good CV, then you are basically sacrificing your precious work down the drain.</p>
 
@@ -184,8 +175,8 @@ window.onload = wrap_img;
   <li>Take some time in the early days to validate the your validation plan by making arbitrary submissions and check CV - LB score correlation</li>
 </ol>
 
-<h3 id="keep-a-log-to-track-what-you-did-on-a-daily-basis">
-<a class="anchor" href="#keep-a-log-to-track-what-you-did-on-a-daily-basis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep a log to track what you did on a daily basis</h3>
+<h2 id="keep-a-log-to-track-what-you-did-on-a-daily-basis">
+<a class="anchor" href="#keep-a-log-to-track-what-you-did-on-a-daily-basis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep a log to track what you did on a daily basis</h2>
 
 <p>Some days you’ll feel a little bit under the weahter, and maybe you’ll go check the LB and see that your rank is low.</p>
 
@@ -197,14 +188,14 @@ window.onload = wrap_img;
 
 <p>Log every idea you have, every little win you made, every bug you fixed, etc..</p>
 
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/254c8b44-56e5-44c3-8f31-5b86dfd9d2a1/Untitled.png" alt="Untitled"></p>
+<p><img src="https://seeken.b-cdn.net/wp-content/uploads/2018/02/Compound-Effect-Can-Help-You.jpg" alt="compound-effect"></p>
 
 <p>A log will help you see the trail of compound improvements that you have made since starting the competition, and by the end you’ll be astonished by what you have achieved.</p>
 
 <p>It’s okay to check the leader-board, but don’t get sucked into it. Instead, check this log and be proud of yourself. Compare yourself only with your past self and just keep on making little steps and wins one day at a time.</p>
 
-<h3 id="keep-a-list-of-any-improvement-and-ideas-that-come-to-mind-or-that-you-have-read-which-you-can-try">
-<a class="anchor" href="#keep-a-list-of-any-improvement-and-ideas-that-come-to-mind-or-that-you-have-read-which-you-can-try" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep a list of any improvement and ideas that come to mind or that you have read which you can try</h3>
+<h2 id="keep-a-list-of-any-improvement-and-ideas-that-come-to-mind-or-that-you-have-read-which-you-can-try">
+<a class="anchor" href="#keep-a-list-of-any-improvement-and-ideas-that-come-to-mind-or-that-you-have-read-which-you-can-try" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep a list of any improvement and ideas that come to mind or that you have read which you can try</h2>
 
 <p>Often times you’ll get some new ideas that you want to implement, and you might be implementing something just to get a new idea while doing that or based on the results of that idea.</p>
 
@@ -212,8 +203,8 @@ window.onload = wrap_img;
 
 <p>Sometimes you’ll have more ideas that you can implement, and sometimes you’ll have a shortage of ideas, which is why keeping a list is paramount to continuous improvement.</p>
 
-<h3 id="keep-a-list-of-any-problem-that-faces-you-and-prioritize-solving-them">
-<a class="anchor" href="#keep-a-list-of-any-problem-that-faces-you-and-prioritize-solving-them" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep a list of any problem that faces you and prioritize solving them</h3>
+<h2 id="keep-a-list-of-any-problem-that-faces-you-and-prioritize-solving-them">
+<a class="anchor" href="#keep-a-list-of-any-problem-that-faces-you-and-prioritize-solving-them" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep a list of any problem that faces you and prioritize solving them</h2>
 
 <p>This goes without saying, once a problem occurs you have to make it top priority to solve. Once a problem occurs during submission, like a notebook timeout, or running out of memory, you need to prioritize fixing, or at least understanding why that happens.</p>
 
@@ -221,8 +212,8 @@ window.onload = wrap_img;
 
 <p>So to avoid wasting time and energy, find the root cause of any problem that occurs and prioritize fixing it.</p>
 
-<h3 id="keep-a-list-of-the-things-that-you-need-to-educate-yourself-about">
-<a class="anchor" href="#keep-a-list-of-the-things-that-you-need-to-educate-yourself-about" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep a list of the things that you need to educate yourself about</h3>
+<h2 id="keep-a-list-of-the-things-that-you-need-to-educate-yourself-about">
+<a class="anchor" href="#keep-a-list-of-the-things-that-you-need-to-educate-yourself-about" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keep a list of the things that you need to educate yourself about</h2>
 
 <p>Often times you’ll find that you don’t understand something, and it can become overwhelming because this often times for me is like every 5 lines of code when I’m reading someone’s notebook.</p>
 
@@ -234,8 +225,8 @@ window.onload = wrap_img;
 
 <p>And if there is something that I want you to take out of this post in general, it is to take everything one step at a time.</p>
 
-<h3 id="make-a-plan-based-on-the-three-lists-that-you-have-for-what-you-should-be-doing-in-the-next-x-days">
-<a class="anchor" href="#make-a-plan-based-on-the-three-lists-that-you-have-for-what-you-should-be-doing-in-the-next-x-days" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make a plan based on the three lists that you have for what you should be doing in the next X days</h3>
+<h2 id="make-a-plan-based-on-the-three-lists-that-you-have-for-what-you-should-be-doing-in-the-next-x-days">
+<a class="anchor" href="#make-a-plan-based-on-the-three-lists-that-you-have-for-what-you-should-be-doing-in-the-next-x-days" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make a plan based on the three lists that you have for what you should be doing in the next X days</h2>
 
 <p>In kaggle competitions (and maybe in life in general), the perfect is the enemy of the good.</p>
 
@@ -268,8 +259,10 @@ window.onload = wrap_img;
 
 <p>So while looking into a previous competition winning solutions, I found a nice augmentation pipeline, so I tested that, and with a little tweaks I found that my models trained better.</p>
 
-<h3 id="believe-in-yourself">
-<a class="anchor" href="#believe-in-yourself" aria-hidden="true"><span class="octicon octicon-link"></span></a>Believe in yourself</h3>
+<h2 id="believe-in-yourself">
+<a class="anchor" href="#believe-in-yourself" aria-hidden="true"><span class="octicon octicon-link"></span></a>Believe in yourself</h2>
+
+<p><img src="https://i.pinimg.com/736x/a1/fd/2c/a1fd2c8da7f90f91a59dddd13dbd9eeb.jpg" alt="believe"></p>
 
 <p>I personally find this step a little bit hard, and I don’t know about you. But if you believe that you can’t be winner, you probably won’t be.</p>
 
@@ -282,6 +275,24 @@ window.onload = wrap_img;
 <p>Know your strengths and improve them.</p>
 
 <p>Understand that now one is born with kaggle gold medal (of course some people find it easier that others), but most people start somewhere, and if they want to improve their positioning, they work on themselves and do it.</p>
+
+<h1 id="tldr">
+<a class="anchor" href="#tldr" aria-hidden="true"><span class="octicon octicon-link"></span></a>TL;DR</h1>
+
+<ol>
+  <li>Make notebook templates to store your code in an organized way.</li>
+  <li>Package the code that you have tested to enable using it in multiple places.</li>
+  <li>Explore and develop and robust CV</li>
+  <li>Keep a log to track what you did on a daily basis</li>
+  <li>Keep a list of any improvement and ideas that come to mind or that you have read which you can try</li>
+  <li>Keep a list of any problem that faces you and prioritize solving them</li>
+  <li>Keep a list of the things that you need to educate yourself about</li>
+  <li>Begin everyday by reviewing the log to motivate yourself about the stuff that you have already worked on</li>
+  <li>Always make a plan based on the three lists that you have for what you should be doing in the next 3 days for example to avoid feeling distracted by all the information</li>
+  <li>Set a daily time to scan through new notebooks and discussions for any new ideas or information and jot them down in your log and lists accordingly</li>
+  <li>Don’t watch your models train</li>
+  <li>Last but not least, believe in yourself.</li>
+</ol>
 
   </div><a class="u-url" href="/blog/markdown/2022/07/16/kaggle-tips.html" hidden></a>
 </article>
