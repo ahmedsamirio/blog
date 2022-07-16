@@ -25,7 +25,7 @@ So along this way, I came up with a system that isn’t perfect, but currently s
 Also, once the competition finished, I reflected upon this experience to extract some lessons to help me win more competitions, and hopefully you too.
 
 
-## Make notebook templates to store your code in an organized way
+### Make notebook templates to store your code in an organized way
 
 Through out a competition you’ll need 4 kinds of notebooks
 
@@ -36,7 +36,7 @@ Through out a competition you’ll need 4 kinds of notebooks
 
 Why do I think you need 4 notebooks? Well not exactly 4, it’s not carved on stone, but you need to organize your code in way that enables you to iterate quickly, and if all of your work is in just one notebook, you’ll find yourself distracted by the different parts you have in there. And whenever you try to reach a part or track something that you’ve written before, it’ll be a nightmare.
 
-## Package the code that you have tested to enable using it in multiple places
+### Package the code that you have tested to enable using it in multiple places
 
 Now say that you have written some code and organized it into functions or classes, does it make sense to keep copying it around all of your notebooks?
 
@@ -44,7 +44,7 @@ Or say that you are using something other than kaggle notebooks, does it make se
 
 That doesn’t make any sense. What makes sense is that you package any code that you have written and tested into a local package, and maybe you can even upload that package as a dataset, so whenever you are switching over to kaggle notebooks, you know that your functions will be there too without copying and pasting anything.
 
-## Develop a robust validation plan
+### Develop a robust validation plan
 
 ![cv-lb-score](https://www.datasciencecentral.com/wp-content/uploads/2021/10/CV_vs_LB.png)
 
@@ -56,7 +56,7 @@ If you only follow the public LB, you might get shaken up in the end. What you n
 2. Engage in the discussion forums with other participants and ask about CV if there is something that you don’t get
 3. Take some time in the early days to validate the your validation plan by making arbitrary submissions and check CV - LB score correlation
 
-## Keep a log to track what you did on a daily basis
+### Keep a log to track what you did on a daily basis
 
 Some days you’ll feel a little bit under the weahter, and maybe you’ll go check the LB and see that your rank is low. 
 
@@ -74,7 +74,7 @@ A log will help you see the trail of compound improvements that you have made si
 
 It’s okay to check the leader-board, but don’t get sucked into it. Instead, check this log and be proud of yourself. Compare yourself only with your past self and just keep on making little steps and wins one day at a time.
 
-## Keep a list of any improvement and ideas that come to mind or that you have read which you can try
+### Keep a list of any improvement and ideas that come to mind or that you have read which you can try
 
 Often times you’ll get some new ideas that you want to implement, and you might be implementing something just to get a new idea while doing that or based on the results of that idea.
 
@@ -82,7 +82,7 @@ That’s why I suggest keeping a list with literally every idea that you get.
 
 Sometimes you’ll have more ideas that you can implement, and sometimes you’ll have a shortage of ideas, which is why keeping a list is paramount to continuous improvement. 
 
-## Keep a list of any problem that faces you and prioritize solving them
+### Keep a list of any problem that faces you and prioritize solving them
 
 This goes without saying, once a problem occurs you have to make it top priority to solve. Once a problem occurs during submission, like a notebook timeout, or running out of memory, you need to prioritize fixing, or at least understanding why that happens.
 
@@ -90,7 +90,7 @@ Sometimes you can postpone fixing that, and then you might find later that your 
 
 So to avoid wasting time and energy, find the root cause of any problem that occurs and prioritize fixing it.
 
-## Keep a list of the things that you need to educate yourself about
+### Keep a list of the things that you need to educate yourself about
 
 Often times you’ll find that you don’t understand something, and it can become overwhelming because this often times for me is like every 5 lines of code when I’m reading someone’s notebook.
 
@@ -102,7 +102,7 @@ You’ll find that it was easier than you expected, but the shear amount of thin
 
 And if there is something that I want you to take out of this post in general, it is to take everything one step at a time.
 
-## Make a plan based on the three lists that you have for what you should be doing in the next X days
+### Make a plan based on the three lists that you have for what you should be doing in the next X days
 
 In kaggle competitions (and maybe in life in general), the perfect is the enemy of the good.
 
@@ -134,7 +134,7 @@ For example, while working on data augmentation, I didn’t know where to start,
 
 So while looking into a previous competition winning solutions, I found a nice augmentation pipeline, so I tested that, and with a little tweaks I found that my models trained better.
 
-## Believe in yourself
+### Believe in yourself
 
 ![believe](https://i.pinimg.com/736x/a1/fd/2c/a1fd2c8da7f90f91a59dddd13dbd9eeb.jpg)
 
