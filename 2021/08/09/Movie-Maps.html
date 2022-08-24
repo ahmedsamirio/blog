@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Movie-Maps - A Webapp that Graphs Network of Characters in Movie Scripts | ahmedsamirio</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Movie-Maps - A Webapp that Graphs Network of Characters in Movie Scripts" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="blog" />
+<meta property="og:description" content="blog" />
+<link rel="canonical" href="https://ahmedsamirio.github.io/blog/2021/08/09/Movie-Maps.html" />
+<meta property="og:url" content="https://ahmedsamirio.github.io/blog/2021/08/09/Movie-Maps.html" />
+<meta property="og:site_name" content="ahmedsamirio" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-08-09T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Movie-Maps - A Webapp that Graphs Network of Characters in Movie Scripts" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-08-09T00:00:00-05:00","datePublished":"2021-08-09T00:00:00-05:00","description":"blog","headline":"Movie-Maps - A Webapp that Graphs Network of Characters in Movie Scripts","mainEntityOfPage":{"@type":"WebPage","@id":"https://ahmedsamirio.github.io/blog/2021/08/09/Movie-Maps.html"},"url":"https://ahmedsamirio.github.io/blog/2021/08/09/Movie-Maps.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ahmedsamirio.github.io/blog/feed.xml" title="ahmedsamirio" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">ahmedsamirio</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Movie-Maps - A Webapp that Graphs Network of Characters in Movie Scripts</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-08-09T00:00:00-05:00" itemprop="datePublished">
+        Aug 9, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="../images/network/lotr-2.png" alt="post-background" /></p>
+
+<p>The story of this project starts in the Udacity Data Scientist Nanodegree. The Nanodegree has a simple course about web development using Bootstrap, Flask and JQuery.</p>
+
+<p>They provided an ungraded project in which you create a dashboard webapp using Flask that fetched data and visualizes it from the WorldBank API.</p>
+
+<p>But I really wanted to do something unique in this project, and I thought that doing the project this way wouldn’t teach me anything worthwhile, so I kept digging and digging for ideas that might interest me and have the right mix of challenge and ease that won’t get me discouraged.</p>
+
+<p>I had been interested in NLP for a while, but this interest didn’t produce any fruitful outcome until now, so I thought that this project should have some NLP in it.</p>
+
+<p>And It finally occurred to me to analyze movie scripts and compare them with each other, specifically of my favorite directors Christopher Nolan and Quentin Tarantino, since they both write their movies’ screenplays.</p>
+
+<p>So I started preparing for this project and searching for ways to get the data, and while exploring the things that can be done, the most interesting thing that I found was analyzing the network of interactions between the characters in the script.</p>
+
+<p>A network graph consists of nodes that have various sizes, which are connected by edges. What I had in mind was to make a node for each character with its size varying according to the number of dialogues they have in the script, and to trace the edges between these nodes according to the number of interaction between these characters, and it’s illustrated in the following image.</p>
+
+<p><img src="../images/network/starwars.png" alt="illustration" /></p>
+
+<p>After successfully making the first network graph, I found that the method could generalize to any script (as all scripts almost have the same anatomy), and so I decided to start a stand-alone project which is a webapp that can show the character network of (almost) any movie.</p>
+
+<p>The pipeline of the project consisted of the following steps:</p>
+
+<ol>
+  <li>Getting the data</li>
+  <li>Preparing an app that can make network graphs using movie scripts</li>
+  <li>Deploying the app on the web using heroku</li>
+</ol>
+
+<h2 id="getting-the-data">Getting the data</h2>
+
+<p>This step was really easy as I found <a href="https://imsdb.com/">https://imsdb.com/</a> which is a database the contains numerous movie scripts in HTML format.</p>
+
+<p>Using requests and BeautifulSoup I was able to:</p>
+
+<ol>
+  <li>Fetch and extract all movies relative links in imsdb</li>
+  <li>Loop over the movies and extract their script texts from HTML pages using BeautifulSoup</li>
+  <li>Save the scripts texts and saving a clean version of the movie name for further lookups</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  response = requests.get('https://imsdb.com/all-scripts.html')
+html = response.text
+
+soup = BeautifulSoup(html, "html.parser")
+paragraphs = soup.find_all('p')
+
+movies_files = {}
+
+for p in paragraphs:
+    relative_link = p.a['href']
+    search_title, save_title, script = get_script(relative_link)
+    if not script:
+        continue
+
+    # clean save title from any punctuations that prevent creating a filename
+    save_title = save_title[:-5].translate(str.maketrans('', '', string.punctuation)) + '.txt'
+    script_file = os.path.join(SCRIPTS_DIR, save_title)
+
+    # save script text
+    with open(script_file, 'w', encoding='utf-8') as outfile:
+        outfile.write(script)
+
+    # save mapping of movie name with script text file
+    movies_files[search_title] = script_file
+
+# save mapping to a picke file for easy loading
+movies_files_pkl =  open(os.path.join(SCRIPTS_DIR, MOVIES), 'wb')
+pickle.dump(movies_files, movies_files_pkl)
+</code></pre></div></div>
+
+<p>For more information about cleaning the HTML you can check the github repo.</p>
+
+<h2 id="preparing-the-visualization-app">Preparing the visualization app</h2>
+
+<p>Now this part was the one that interested me the most, how could I extract characters interactions throughout the script?</p>
+
+<p>I didn’t find a perfect answer, but I found one nonetheless.</p>
+
+<p>Let’s take a look at the anatomy of a typical script.</p>
+
+<p><img src="../images/network/anatomy.png" alt="script-anatomy" /></p>
+
+<p>We can see that a character name is distinct as it’s always written in uppercase. We can also see that the only part of the script which is also written in uppercase is the scene heading.</p>
+
+<p>So what if we split the script into sentences, then we looped over them and identified character names, then appended the following dialogue to them.</p>
+
+<p>Using this approach we would be able to identify the dialogue belonging to each character in the script. And that’s exactly what I did.</p>
+
+<p>The condition that I found out was most differentiating between scene headings and character names was the presence of dots and dashes in scene headings. So I used a regular expression that checks for the presence in this in the sentence, alongside being in upper case, to judge whether it’s a character name or not.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def extract_dialogues(script_sents):
+    """Function to extract dialogues from tokenized script sentences."""
+    pattern_compile = re.compile(r'[.,–!:]')
+    dialogues = []
+    add_dialogue = False
+    for sent in script_sents:
+        if not (sent.startswith('(') and sent.endswith(')')):
+            if add_dialogue:
+                if not (sent.strip().isupper() and not pattern_compile.search(sent)):
+                    dialogues.append((character, sent))
+                add_dialogue = False
+            if (sent.strip().isupper() and not pattern_compile.search(sent))\
+               and not (sent.strip().startswith('(') and sent.strip().endswith(')')):
+                character = sent.strip()
+                add_dialogue = True
+    return dialogues
+</code></pre></div></div>
+
+<p>The next part was finding out through this extracted dialogue, who is talking to whom?</p>
+
+<p>To be honest, I used the most simple approach that crossed my mind, and that was shifting the dialogue between characters one step backward, so this way if X said something followed by Y saying something, you’d get the X said something to Y, and if X said something after Y, you’d get that Y also said something to X.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  text = open(movie_file, 'r').read()
+text = clean_script_text(text)
+sents = sent_tokenize_script(text)
+dialogue = extract_dialogues(sents)
+dialogue_df = pd.DataFrame(dialogue, columns=['character', 'text'])
+
+# Make list of dialogue exchanged
+dialogue_df['character_shifted'] = dialogue_df.character.shift(-1)
+</code></pre></div></div>
+
+<p>But what if a scene ends with X saying something, then another scene starts with Z saying something, wouldn’t that mean that we’d get that X said something to Z?</p>
+
+<p>That’s true, but it wouldn’t matter that much, because if X regularly interacted with Z throughout the whole script, a wrongly attributed interaction between them wouldn’t affect the results that much, and if they never interacted, then this wrongfully attributed interaction would be filtered out in the end of the visualization pipeline as we don’t want to show extremely rare interactions between characters, even if they were correct.</p>
+
+<p>Also what if a scene ended with X, then another scene started with X? or what if a scene had X say two sentences back to back?</p>
+
+<p>The easy solution to this was to drop any exchange from a character to itself all together, but still count it into their dialogue count as this would affect the sizes of their node in the network visualization.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># extract character pairs
+pairs = dialogue_df[['character', 'character_shifted']].values.tolist()[:-1]
+
+# remove dialogues from one character to themselves and sort exchanges
+pairs = ['-'.join(sorted(x)) for x in pairs if x[0] != x[1]]
+</code></pre></div></div>
+
+<p>Another shortcoming of this method is that it wouldn’t capture interaction between multiple characters, since it’s a linear approach that depends on which character speaks after another.</p>
+
+<p>I originally had a solution for this which was to extract the scenes in the script, and use the appearances of characters together in scenes as interactions, but I honestly didn’t care that much to implement it as the current method yielded nice results.</p>
+
+<p>Another important point was to remove characters which didn’t appear much throughout the script, as they cluttered the visualization and made it look bad for no reason.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># top characters lines count
+characters_lines = dialogue_df.character.value_counts()
+top_characters = characters_lines[characters_lines &gt; 5]
+
+# count exchanges
+pairs = pd.Series(pairs).value_counts()
+top_pairs = pairs[in_top_characters(pairs.index, top_characters)]
+</code></pre></div></div>
+
+<p>And now since I had information about the characters, and how many dialogues they have, and the interactions between these characters, I was ready to move on to making the network.</p>
+
+<p>To remind you, a network graph consists of:</p>
+
+<ol>
+  <li>Nodes</li>
+  <li>Edges the connect nodes</li>
+</ol>
+
+<p>In our case the nodes where the characters, and the size of these nodes was the dialogue count throughout the script. The edges where the interactions between these characters.</p>
+
+<p>I used NetworkX and Plotly to create the graph using network graph. The code in here heavily relied on this <a href="https://github.com/rweng18/midsummer_network">repo</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def make_edge(x, y, text, width):
+    '''Creates a scatter trace for the edge between x's and y's with given width
+
+    Parameters
+    ----------
+    x    : a tuple of the endpoints' x-coordinates in the form, tuple([x0, x1, None])
+    
+    y    : a tuple of the endpoints' y-coordinates in the form, tuple([y0, y1, None])
+    
+    width: the width of the line
+
+    Returns
+    -------
+    An edge trace that goes between x0 and x1 with specified width.
+    '''
+    return go.Scatter(x=x,
+                      y=y,
+                      line=dict(width=width,
+                                color='cornflowerblue'),
+                      hoverinfo='none',
+                      text=([text]),
+                      mode='lines')
+
+
+def get_network_traces(top_characters, top_pairs, pair_chars):
+    dialogue = nx.Graph()
+    
+    # add node for each character
+    for char, count in top_characters.iteritems():
+        if char in pair_chars:
+            dialogue.add_node(char, size=count)
+        
+    # for each dialogue exchange between two character add an edge
+    for pair, count in top_pairs.iteritems():
+        char1, char2 = pair.split('-')
+        dialogue.add_edge(char1, char2, weight=count)
+        
+    # get positions for nodes
+    pos_ = nx.spring_layout(dialogue)
+    
+    # for each edge make edge trace, append to list
+    edge_trace = []
+    for edge in dialogue.edges():
+        if dialogue.edges()[edge]['weight'] &gt; 0:
+            char1 = edge[0]
+            char2 = edge[1]
+
+            x0, y0 = pos_[char1]
+            x1, y1 = pos_[char2]
+
+            text   = char1 + '--' + char2 + ': ' + str(dialogue.edges()[edge]['weight'])
+            trace  = make_edge([x0, x1, None], [y0, y1, None], text,
+                               0.1*dialogue.edges()[edge]['weight']**0.5)
+            edge_trace.append(trace)
+            
+    # make a node trace
+    node_trace = go.Scatter(x         = [],
+                            y         = [],
+                            text      = [],
+                            textposition = "top center",
+                            textfont_size = 10,
+                            mode      = 'markers+text',
+                            hoverinfo = 'none',
+                            marker    = dict(color = [],
+                                             size  = [],
+                                             line  = None,
+                                             reversescale=True
+                                            ))
+    # For each node in dialogue, get the position and size and add to the node_trace
+    for node in dialogue.nodes():
+        x, y = pos_[node]
+        node_trace['x'] += tuple([x])
+        node_trace['y'] += tuple([y])
+        node_trace['marker']['color'] += tuple(['cornflowerblue'])
+        node_trace['marker']['size'] += tuple([dialogue.nodes()[node]['size']**0.7])
+        node_trace['text'] += tuple(['&lt;b&gt;' + node + '&lt;/b&gt;'])
+        
+    return edge_trace, node_trace
+</code></pre></div></div>
+
+<p>Until I have created an app that can take a movie script and output a network graph that looks like this:</p>
+
+<p>INSET IMAGE</p>
+
+<h2 id="deploying-the-app-using-heroku">Deploying the app using heroku</h2>
+
+<p>My knowledge about web development in general is really shallow, but using what I’ve learned in the small course provided by Udacity in the nanodegree and the template for their original project, I was able to hack together a web app that suited my needs.</p>
+
+<p>I wanted the app to have a search bar with autocomplete which you can type the name of a movie in, and it would autocomplete based on the available scripts, with a button that loads the network graph on the same page.</p>
+
+<p>The webapp is available at <a href="https://movie-character-network.herokuapp.com/">https://movie-character-network.herokuapp.com/</a></p>
+
+<h2 id="final-remarks">Final Remarks</h2>
+
+<p>I didn’t care much for design, as the perfect is definitely the enemy of the good here.</p>
+
+<p>I definetly didn’t make a perfect application that correctly graphs interactions between characters in any movie script, and actually I didn’t aim to, nor do I think that it’s possible since there are many variations in any given script that reduces the ability of hard rules to infer such interactions.</p>
+
+<p>That doesn’t mean that you can’t dissect a single movie script and graph the interactions in a very meticulous way, but it rather restricts any thought that this dissection would generalize to every other script out there, as evident by this web app.</p>
+
+<p>This project is rather a fun way to look into the movies you love and see how they are different from each other using their network graphs, as some movies can have multiple storylines, which can be evident in their networks, like the movie “Babel” or “The Lord of The Rings: The Two Towers”</p>
+
+<p><img src="../images/network/babel.png" alt="babel" />
+<img src="../images/network/lotr.png" alt="the-two-towers" /></p>
+
+<p>And some movies can be really centralized around one character like “Thor: Ragnarok”.</p>
+
+<p><img src="../images/network/thor.png" alt="thor" /></p>
+
+<p>You can checkout the full code and understand more about deploying the webapp and running it in you environment in the <a href="https://github.com/ahmedsamirio/movie-character-network">github repo</a>.</p>
+
+<p>Thanks for reading.</p>
+
+  </div><a class="u-url" href="/blog/2021/08/09/Movie-Maps.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>blog</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/ahmedsamirio" target="_blank" title="ahmedsamirio"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/ahmedsamirio" target="_blank" title="ahmedsamirio"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
