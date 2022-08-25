@@ -88,7 +88,7 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p><img src="../images/network/lotr-2.png" alt="post-background" /></p>
+    <p><img src="/images/network/lotr-2.png" alt="post-background" /></p>
 
 <p>The story of this project starts in the Udacity Data Scientist Nanodegree. The Nanodegree has a simple course about web development using Bootstrap, Flask and JQuery.</p>
 
@@ -104,7 +104,7 @@ window.onload = wrap_img;
 
 <p>A network graph consists of nodes that have various sizes, which are connected by edges. What I had in mind was to make a node for each character with its size varying according to the number of dialogues they have in the script, and to trace the edges between these nodes according to the number of interaction between these characters, and it’s illustrated in the following image.</p>
 
-<p><img src="../images/network/starwars.png" alt="illustration" /></p>
+<p><img src="/images/network/starwars.png" alt="illustration" /></p>
 
 <p>After successfully making the first network graph, I found that the method could generalize to any script (as all scripts almost have the same anatomy), and so I decided to start a stand-alone project which is a webapp that can show the character network of (almost) any movie.</p>
 
@@ -168,7 +168,7 @@ pickle.dump(movies_files, movies_files_pkl)
 
 <p>Let’s take a look at the anatomy of a typical script.</p>
 
-<p><img src="../images/network/anatomy.png" alt="script-anatomy" /></p>
+<p><img src="/images/network/anatomy.png" alt="script-anatomy" /></p>
 
 <p>We can see that a character name is distinct as it’s always written in uppercase. We can also see that the only part of the script which is also written in uppercase is the scene heading.</p>
 
@@ -335,7 +335,7 @@ def get_network_traces(top_characters, top_pairs, pair_chars):
 
 <p>Until I have created an app that can take a movie script and output a network graph that looks like this:</p>
 
-<p><img src="../images/network/starwars.png" alt="illustration" /></p>
+<p><img src="/images/network/starwars.png" alt="illustration" /></p>
 
 <h2 id="deploying-the-app-using-heroku">Deploying the app using heroku</h2>
 
@@ -355,12 +355,12 @@ def get_network_traces(top_characters, top_pairs, pair_chars):
 
 <p>This project is rather a fun way to look into the movies you love and see how they are different from each other using their network graphs, as some movies can have multiple storylines, which can be evident in their networks, like the movie “Babel” or “The Lord of The Rings: The Two Towers”</p>
 
-<p><img src="../images/network/babel.png" alt="babel" />
-<img src="../images/network/lotr.png" alt="the-two-towers" /></p>
+<p><img src="/images/network/babel.png" alt="babel" />
+<img src="/images/network/lotr.png" alt="the-two-towers" /></p>
 
 <p>And some movies can be really centralized around one character like “Thor: Ragnarok”.</p>
 
-<p><img src="../images/network/thor.png" alt="thor" /></p>
+<p><img src="/images/network/thor.png" alt="thor" /></p>
 
 <p>You can checkout the full code and understand more about deploying the webapp and running it in you environment in the <a href="https://github.com/ahmedsamirio/movie-character-network">github repo</a>.</p>
 
