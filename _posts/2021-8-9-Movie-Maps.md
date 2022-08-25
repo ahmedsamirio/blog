@@ -264,7 +264,7 @@ My knowledge about web development in general is really shallow, but using what 
 
 I wanted the app to have a search bar with autocomplete which you can type the name of a movie in, and it would autocomplete based on the available scripts, with a button that loads the network graph on the same page. 
 
-The webapp is available at [https://movie-character-network.herokuapp.com/](https://movie-character-network.herokuapp.com/)
+The webapp is available at [https://movie-maps.herokuapp.com/](https://movie-maps.herokuapp.com/)
  
 ## Final Remarks
   
