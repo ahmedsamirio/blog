@@ -3,7 +3,7 @@ layout: post
 title: Movie-Maps - A Webapp that Graphs Network of Characters in Movie Scripts
 ---
 
-![post-background](../images/network/lotr-2.png)
+![post-background](/images/network/lotr-2.png)
 
 The story of this project starts in the Udacity Data Scientist Nanodegree. The Nanodegree has a simple course about web development using Bootstrap, Flask and JQuery. 
 
@@ -19,7 +19,7 @@ So I started preparing for this project and searching for ways to get the data, 
 
 A network graph consists of nodes that have various sizes, which are connected by edges. What I had in mind was to make a node for each character with its size varying according to the number of dialogues they have in the script, and to trace the edges between these nodes according to the number of interaction between these characters, and it's illustrated in the following image.
 
-![illustration](../images/network/starwars.png)
+![illustration](/images/network/starwars.png)
   
   
 After successfully making the first network graph, I found that the method could generalize to any script (as all scripts almost have the same anatomy), and so I decided to start a stand-alone project which is a webapp that can show the character network of (almost) any movie. 
@@ -83,7 +83,7 @@ I didn't find a perfect answer, but I found one nonetheless.
 
 Let's take a look at the anatomy of a typical script.
   
-![script-anatomy](../images/network/anatomy.png)
+![script-anatomy](/images/network/anatomy.png)
   
 We can see that a character name is distinct as it's always written in uppercase. We can also see that the only part of the script which is also written in uppercase is the scene heading. 
 
@@ -256,7 +256,7 @@ def get_network_traces(top_characters, top_pairs, pair_chars):
   
 Until I have created an app that can take a movie script and output a network graph that looks like this:
 
-![illustration](../images/network/starwars.png)
+![illustration](/images/network/starwars.png)
 
 ## Deploying the app using heroku
 
@@ -276,12 +276,12 @@ That doesn't mean that you can't dissect a single movie script and graph the int
 
 This project is rather a fun way to look into the movies you love and see how they are different from each other using their network graphs, as some movies can have multiple storylines, which can be evident in their networks, like the movie "Babel" or "The Lord of The Rings: The Two Towers"
 
-![babel](../images/network/babel.png)
-![the-two-towers](../images/network/lotr.png)
+![babel](/images/network/babel.png)
+![the-two-towers](/images/network/lotr.png)
 
 And some movies can be really centralized around one character like "Thor: Ragnarok".
 
-![thor](../images/network/thor.png)
+![thor](/images/network/thor.png)
 
 
 You can checkout the full code and understand more about deploying the webapp and running it in you environment in the [github repo](https://github.com/ahmedsamirio/movie-character-network).
