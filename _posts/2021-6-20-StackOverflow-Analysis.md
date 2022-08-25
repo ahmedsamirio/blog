@@ -3,7 +3,7 @@ layout: post
 title: Can You Still Get Hired as a Developer Without Having a CS Background?
 ---
 
-![blogpost image](../images/stackoverflow/swdeveloper.jpg)
+![blogpost image](/images/stackoverflow/swdeveloper.jpg)
 
 This question always bothers me when contemplating the career-shift I'm attempting to do.
 
@@ -17,7 +17,7 @@ I chose to analyze the StackOverflow data from 2015 until 2020 to answer the que
 
 ## How present are professional developers with no CS background in the market?
 
-![market composition](../images/stackoverflow/market_composition_donut.png)
+![market composition](/images/stackoverflow/market_composition_donut.png)
 
 To my surprise I found out that in the 2015 survey, developers with no CS background constitued about 41% of the respondents.
 
@@ -25,7 +25,7 @@ And this percentage remained the same through 2016, before the sudden drop of 20
 
 When I examined why the percentage of professional respondents with no CS background decreased I found out the this was due to a continued increase in the number of CS fresh graduates which you can see in the next bar plot.
 
-![market composition](../images/stackoverflow/market_composition_bar.png)
+![market composition](/images/stackoverflow/market_composition_bar.png)
 
 Before 2017, the number of professional respondents with no CS background exceeded those with CS background, but we can see the shift that happened in 2017.
 
@@ -52,7 +52,7 @@ While another groups insisted that the best way to learn data science is by doin
 
 So first I wanted to look at the trends in data science education.
 
-![education_trends](../images/stackoverflow/ds_education_bar.png)
+![education_trends](/images/stackoverflow/ds_education_bar.png)
 
 ### Self-education
 
@@ -85,7 +85,7 @@ And after that I wanted to understand how does each one relate to salary?
 
 So what I did was aggregate the mean salary for the respondents who said they used each on of the education methods listed in the survey, and this is what I found out.
 
-![mean salary of education](../images/stackoverflow/ds_eduation_mean_salary.png)
+![mean salary of education](/images/stackoverflow/ds_eduation_mean_salary.png)
 
 From the get go we can see online classes and part-time programs are the last in line, which was kind of shocking for me because if we look into the percentage of each education method over the years, we see that the methods with the highest mean salaries aren't that popular. 
 
@@ -110,7 +110,7 @@ You should also utilize online and part-time courses, but no the point where the
 
 I thought that there might be a relationship between salary and job satisfaction, and when I saw the next plot I laughed out loud.
 
-![salary over satisfaction](../images/stackoverflow/salary_vs_js.png)
+![salary over satisfaction](/images/stackoverflow/salary_vs_js.png)
 
 How can the median salary decrease when satisfaction decreases, but then increase when dissatisfaction decreases below neutral?
 
@@ -120,7 +120,7 @@ But what are these factors that make a developer dissatified with his job?
 
 What are the challenges that he/she faces?
 
-![salary over satisfaction](../images/stackoverflow/jobsat_challenges.png)
+![salary over satisfaction](/images/stackoverflow/jobsat_challenges.png)
 
 The percentage of developers facing lack of support from management seems to decrease as satisfaction increases. Which indicates that lack of support from management defines a bad work experience, where the increase in answers from very dissatisfied developers differs from very satisfied by 53.5%.
 
