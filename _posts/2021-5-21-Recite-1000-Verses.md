@@ -2,7 +2,7 @@
 layout: post
 title: How to Recite 1000 Quran Verses
 ---
-![an image alt text](../images/first_eight.png "First Way - Eight Rakaas")
+![an image alt text](/images/first_eight.png "First Way - Eight Rakaas")
 
 It was the end of Ramadan when I began thinking about how I shall address the habit of night prayers (qiyyam) after the holy month, and thinking to myself that I should specifiy a daily goal (werd). And then I remembered the hadith:
 
@@ -35,7 +35,7 @@ response = urllib.request.urlopen(url)
 data = json.loads(response.read())
 surahs = pd.DataFrame(data)
 ```
-![an image alt text](../images/surahs.png "Surahs DataFrame")
+![an image alt text](/images/surahs.png "Surahs DataFrame")
 
 
 ```python
@@ -44,7 +44,7 @@ response = urllib.request.urlopen(url)
 data = json.loads(response.read())
 text = pd.DataFrame(data)
 ```
-![an image alt text](../images/text.png "Text DataFrame")
+![an image alt text](/images/text.png "Text DataFrame")
 
 
 # Analyzing the data
@@ -64,19 +64,19 @@ Since we read Al-Fatihah at least one time in Qiyyam (In a one rakaa' wetr praye
 
 Now that we have our baseline, let's take a look into what the data dictates.
 
-![an image alt text](../images/word_to_verse.png "Word to Verse Distribution")
+![an image alt text](/images/word_to_verse.png "Word to Verse Distribution")
 
 
 We can see the word to verse ratio in all Surahs is bimodal. We can see that the a great proportion of the Surahs have low word to verse ratio. So how many of them would it take to complete 1000 verses if I we ranked the Surahs by word to verse in ascending order?
 
 
-![an image alt text](../images/cumlative_verses.png "Cumlative Verses")
+![an image alt text](/images/cumlative_verses.png "Cumlative Verses")
 
 
 
 So using this information, we know that it would take 34 surahs to complete 1000 verses. But Surahs in here are sorted by the word to verse ratio, how would we actually read them if they were sorted by their number?
 
-![an image alt text](../images/first_order.png "First Way Order")
+![an image alt text](/images/first_order.png "First Way Order")
 
 So by following this you wouldn't start at Al-Mulk, but rather at As-Saaffaat, and then skipping to Ar-Rahmaan and Al-Waaqia, then skip to Al-Muddaththir and recite until the end while skipping some Surahs that have high word to verse ratio.
 
@@ -103,7 +103,7 @@ And it turns out that the number of pages from Juz Amma this way saves is 8.3253
 I figured out that I should stick with the most important part, which are the parts that finish the bulk of the verses. The first 3 Surahs (As-Saaffaat, Ar-Rahmaan and Al-Waaqia) completed 356 verses, which is around 35% of the way. If we recited them and started reciting without any skips from Al-Muddaththir, when could we get the 1000 verses?
 
 
-![an image alt text](../images/second_order.png "Second Way Order")
+![an image alt text](/images/second_order.png "Second Way Order")
 
 Total number of Surahs: 29  
 Total number of Verses: 1006  
@@ -119,7 +119,7 @@ By comparing the character difference to Surahs char count, we find that the dif
 
 Now there are 2 choices for, so you either go with the easiest way to read 1000 verses which saves you around 8.25 pages, or you go with a still easy way that saves you 6.25 pages, or you go with the old way by reading the two Juz's back to back.
 
-![an image alt text](../images/word_counts.png "Word Counts")
+![an image alt text](/images/word_counts.png "Word Counts")
 
 
 
@@ -131,34 +131,34 @@ This question wasn't intended as a call for laziness, afterall if you intended t
 
 I've illustrated how you would do that exactly in the next plots
 
-![an image alt text](../images/first_two.png "First Way - Two Rakaas")
+![an image alt text](/images/first_two.png "First Way - Two Rakaas")
 
 
-![an image alt text](../images/first_four.png "First Way - Four Rakaas")
+![an image alt text](/images/first_four.png "First Way - Four Rakaas")
 
-![an image alt text](../images/first_eight.png "First Way - Eight Rakaas")
+![an image alt text](/images/first_eight.png "First Way - Eight Rakaas")
 
 
 
 ## How would you pray 2, 4 or 8 Rakaas using the second easiest way?
 
-![an image alt text](../images/second_two.png "Second Way - Two Rakaas")
+![an image alt text](/images/second_two.png "Second Way - Two Rakaas")
 
 
-![an image alt text](../images/second_four.png "Second Way - Four Rakaas")
+![an image alt text](/images/second_four.png "Second Way - Four Rakaas")
 
-![an image alt text](../images/second_eight.png "Second Way - Eight Rakaas")
+![an image alt text](/images/second_eight.png "Second Way - Eight Rakaas")
 
 
 # Other Scenarios
 
 Now you might have started reading somewhere else, and you want to continue reciting a specific number of verses, but you are still looking for an easy way to do it. That's why I've the following charts.
 
-![an image alt text](../images/other_1.png "Cumlative ascending")
+![an image alt text](/images/other_1.png "Cumlative ascending")
 
-![an image alt text](../images/other_2.png "Cumlative Reversed")
+![an image alt text](/images/other_2.png "Cumlative Reversed")
 
-![an image alt text](../images/other_3.png "Verses Count")
+![an image alt text](/images/other_3.png "Verses Count")
 
 
 Now you have all the tools to recite those 1000 verses, I pray that we're all blessed to be from those who did this.
