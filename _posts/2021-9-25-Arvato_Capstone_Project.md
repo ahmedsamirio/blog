@@ -3,7 +3,7 @@ layout: post
 title: Bertelsmann Arvato Capstone Project
 ---
 
-![Header Image](../images/arvato/header.jpeg)
+![Header Image](/images/arvato/header.jpeg)
 
 First of all, I'm really happy to be writing this blog post as this signals the end of my Data Scientist Nano-degree journey generally, and the capstone project specifically. 
 
@@ -196,7 +196,7 @@ plt.title("Distribution of Null Values in Columns");
 plt.legend();
 ```
 
-![null columns](../images/arvato/null_columns.png)
+![null columns](/images/arvato/null_columns.png)
 
 ```python
 azdias_null_rows = get_null_prop(azdias, 1, False)
@@ -208,7 +208,7 @@ plt.title("Distribution of Null Values in Rows");
 plt.legend();
 ```
 
-![null rows](../images/arvato/null_rows.png)
+![null rows](/images/arvato/null_rows.png)
 
 From the above graphs we can see that the null percentages are definitely higher in `AZDIAS` , and since we will be modeling the clustering algorithm on it, we will focus our exploration on it, and only look into `CUSTOMER` if needed.
 
@@ -240,9 +240,9 @@ azdias_new = replace_unknown_with_null(azdias)
 
 After replacing the unknown values with null, I visualized the null percentages in old and new `AZDIAS` in order to understand the consequences of this step.
 
-![null columns azdias](../images/arvato/null_columns_azdias.png)
+![null columns azdias](/images/arvato/null_columns_azdias.png)
 
-![null rows azdias](../images/arvato/null_rows_azdias.png)
+![null rows azdias](/images/arvato/null_rows_azdias.png)
 
 After replacing the unknown values with null, we can see more features having higher percentage of null values than before.
 
@@ -325,13 +325,13 @@ By skimming through the results I found that that:
 1. All features are ordinal categorical except **KBA13_ANZAHL_PKW**.
 2. 105 features have the same null percentage which is 11.87%, while the remaining 7 have 13.07%
 
-![null plz8](../images/arvato/null_plz8.png)
+![null plz8](/images/arvato/null_plz8.png)
 
 This rings the bell for data MCAR or MNAR, as there is a pattern that is most likely unrelated to observed data, but can or can't be related to unobserved data, which is why some persons just don't have PLZ8 data collected.
 
 1. **KBA13_ANZAHL_PKW** is supposed to encode the number of cars in the PLZ8, but it has high values of peculiar number which are 1400, 1500, 1300, etc.
 
-![KBA13_ANZAHL_PKW](../images/arvato/KBA13_ANZAHL_PKW.png)
+![KBA13_ANZAHL_PKW](/images/arvato/KBA13_ANZAHL_PKW.png)
 
 We can see that the bins starts getting less granular is we exceed 1200. My guess is that this data was spread between 1300 and the max values, but the granularity of these section was decreased, which explains why the distribution is right skewed but then we start seeing bumps near the end. 
 
@@ -515,7 +515,7 @@ plt.xlabel("Null Ratio")
 plt.legend()
 ```
 
-![null ratio 1](../images/arvato/null_ratio_1.png)
+![null ratio 1](/images/arvato/null_ratio_1.png)
 
 ```python
 category_mean_p = pd.Series({category: np.mean(p) for category, p in category_missing_p.items()}).sort_values(ascending=False)
@@ -525,7 +525,7 @@ plt.ylabel("Mean Null Ratio")
 plt.savefig("null_ratio_2.png");
 ```
 
-![null ratio 2](../images/arvato/null_ratio_2.png)
+![null ratio 2](/images/arvato/null_ratio_2.png)
 
 Using these plots we can see that most of the features will benefit from dropping these rows to get rid of most of the missing values in the data, and the rest can be imputed using the method of our choice.
 
@@ -545,7 +545,7 @@ plt.legend();
 plt.title("Number of Features with More than 90% Missing Values in Rows with More than 50% Missing Values")
 ```
 
-![drop missing rows](../images/arvato/drop_missing_rows.png)
+![drop missing rows](/images/arvato/drop_missing_rows.png)
 
 This graph gives a much clearer picture of what is going on, so let me explain:
 
@@ -766,7 +766,7 @@ def clean_dataset(df, p_row=0.5, p_col=0.5, drop_uncertain=True, keep_features=[
 
 The last step remaining was imputing the data after this cleaning pipeline, so I checked the percentage of missing values in features after it.
 
-![missing after cleaning](../images/arvato/missing_after_cleaning.png)
+![missing after cleaning](/images/arvato/missing_after_cleaning.png)
 
 We can see now that imputations won't be a big deal, and that there is very small number of features that exceed 10% missing values.
 
@@ -785,7 +785,7 @@ But KNN imputation will be time and memory intensive, so we can't do on all feat
 
 Since KNN is memory and time intensive, we need the majority of features to be imputed using mode values, and only small number of features shall be imputed using KNN.
 
-![missing after cleaning box](../images/arvato/missing_after_cleaning_box.png)
+![missing after cleaning box](/images/arvato/missing_after_cleaning_box.png)
 
 Using this box plot we can see that we can only impute features above 10% using KNN. So in order to do that we need to first impute features lower than 10% using mode imputation, then impute the rest of the features using KNN.
 
@@ -907,7 +907,7 @@ After fitting them, I used the cumulative explained variance of each principal c
 
 Then I proceeded with clustering using sklearn's MiniBatchKMeans, and I tested several values for the number of clusters to use and compared the results of their **Inertia** (Average distance between each point and it's cluster center). 
 
-![kmeans inertia](../images/arvato/kmeans_intertia.png)
+![kmeans inertia](/images/arvato/kmeans_intertia.png)
 
 As we can see, the more clusters we set, the better the score we get. But this keeps going forever, so we need to find the elbow point, and I think that is 7.
 
@@ -951,7 +951,7 @@ customers_clusters = kmeans.predict(pca_customers)
 customers_clusters_p = pd.Series(customers_clusters).value_counts()/len(customers_clusters)
 ```
 
-![clusters](../image/arvato/clusters.png)
+![clusters](/image/arvato/clusters.png)
 
 1. We can see an over representation of **cluster 0** in `CUSTOMERS` when compared to `AZDIAS`, with over **40%** of `CUSTOMERS` being in this cluster.
 2. **Clusters 4** and **6** percentages in `CUSTOMERS` also exceed their counterparts in `AZDIAS`.
@@ -1064,7 +1064,7 @@ cluster_5 = clean_azdias[kmeans.labels_ == 5]
 
 ## Age
 
-![Age Analysis](../images/arvato/Age.png)
+![Age Analysis](/images/arvato/Age.png)
 
 #### Customers and Non-Customers
 
@@ -1078,7 +1078,7 @@ So cluster 0 includes is mostly elders with the majority being above 60 years ol
 
 ## Gender
 
-![Gender Analysis](../images/arvato/Gender.png)
+![Gender Analysis](/images/arvato/Gender.png)
 
 #### Customers and Non-Customers
 
@@ -1090,7 +1090,7 @@ Cluster 0 has an over representation of males, where males is higher than all cl
 
 ## Preferred Information and Buying Channels
 
-![Channels Analysis](../images/arvato/Channels.png)
+![Channels Analysis](/images/arvato/Channels.png)
 
 #### Customer and Non-Customers
 
@@ -1102,7 +1102,7 @@ Since cluster 0 mostly represents elderly individuals, it's expected that they w
 
 ## Financial Type
 
-![Financial Analysis](../images/arvato/Financial.png)
+![Financial Analysis](/images/arvato/Financial.png)
 
 #### Customers and Non-Customers
 
@@ -1114,7 +1114,7 @@ We can that the majority of cluster 0 with distinguished financial type are mone
 
 ## Life Stage
 
-![Life Stage Analysis](../images/arvato/Life_Stage.png)
+![Life Stage Analysis](/images/arvato/Life_Stage.png)
 
 #### Customers and Non-Customers
 
@@ -1126,7 +1126,7 @@ Around 70% of cluster 6 are single, with the majority of them being single low-i
 
 ## Return Type
 
-![Return Type Analysis](../images/arvato/Return.png)
+![Return Type Analysis](/images/arvato/Return.png)
 
 #### Customers and Non-Customers
 
@@ -1138,7 +1138,7 @@ First off we can see the cluster 0 and 6 are the only populating most of the cus
 
 ## Main Age within Household
 
-![Main Age Analysis](../images/arvato/Main_Age.png)
+![Main Age Analysis](/images/arvato/Main_Age.png)
 
 #### Customers and Non-Customers
 
@@ -1150,7 +1150,7 @@ We can see that cluster 4 is the main cluster populating younger ages in custome
 
 ## Estimated Net Household Income
 
-![Net Household Income Analysis](../images/arvato/Net_Household.png)
+![Net Household Income Analysis](/images/arvato/Net_Household.png)
 
 #### Customers and Non-Customers
 
@@ -1166,7 +1166,7 @@ Will that would be the case if this feature indicated the income of the individu
 
 ## Neighborhood Area
 
-![Neighborhood Analysis](../images/arvato/Neighborhood.png)
+![Neighborhood Analysis](/images/arvato/Neighborhood.png)
 
 #### Customers and Non-Customers
 
@@ -1178,7 +1178,7 @@ We can see that our remark about the household income difference between cluster
 
 ## Moving Patterns
 
-![Moving Patterns Analysis](../images/arvato/Moving_Patterns.png)
+![Moving Patterns Analysis](/images/arvato/Moving_Patterns.png)
 
 #### Customers and Non-Customers
 
@@ -1215,7 +1215,7 @@ plt.title("Null Percentages in Rows")
 mailout_null_rows = get_null_prop(mailout_train_new, axis=1, plot=True)
 ```
 
-![Mailout Null Before](../images/arvato/mailout_null_before.png)
+![Mailout Null Before](/images/arvato/mailout_null_before.png)
 
 The null percentages somehow conform to the what we saw in `AZDIAS` and `CUSTOMERS` , so I proceeded with cleaning them using the cleaning function, then checking whether they have features that weren't dropped compared to `clean_azdias` .
 
@@ -1275,7 +1275,7 @@ new_feats = ['D19_BUCH_CD', 'VHA', 'EXTSEL992', 'D19_SOZIALES',
 mailout_train_clean[new_feats].hist(figsize=(14, 14));
 ```
 
-![Mailout New Features](../images/arvato/mailout_new_feats.png)
+![Mailout New Features](/images/arvato/mailout_new_feats.png)
 
 All of the features shall be imputed using mean values since all of their missing percentages exceed 10%.
 
@@ -1631,7 +1631,7 @@ mailout_clusters = pd.Series(kmeans.predict(mailout_train_pca), name='label')
 mailout_clusters.value_counts().plot(kind="bar", title="How Are Clusters Distributed in MAILOUT Data?");
 ```
 
-![Mailout Clusters](../images/arvato/mailout_clusters.png)
+![Mailout Clusters](/images/arvato/mailout_clusters.png)
 
 If we were to use these clusters directly, we would predict that the majority of the individuals in the `MAILOUT` data would respond, but we know from the labels than only a very small portion of them actually responded.
 
@@ -2004,7 +2004,7 @@ weighted avg       0.99      0.70      0.81     35093
 Metric Score: 0.7696068445499852
 ```
 
-![Confusion Matrix](../images/arvato/confusion_matrix.png)
+![Confusion Matrix](/images/arvato/confusion_matrix.png)
 
 The results aren't state of the art, but we can see that we are able to predict 84% of the responsive individuals, and only 30% of non-responsive ones are false positives.
 
@@ -2053,7 +2053,7 @@ print("Threshold optimizing Recall: {:.3f}".format(best_recall_thresh))
 Threshold optimizing Recall: 0.516
 ```
 
-![Confusion Matrix1](../images/arvato/confusion_matrix1.png)
+![Confusion Matrix1](/images/arvato/confusion_matrix1.png)
 
 We can see that the best threshold slightly improved the precision of the model, by decreasing the number of false positives from 10327 to 10283.
 
