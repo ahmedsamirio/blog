@@ -256,7 +256,7 @@ def get_network_traces(top_characters, top_pairs, pair_chars):
   
 Until I have created an app that can take a movie script and output a network graph that looks like this:
 
-INSET IMAGE
+![illustration](../images/network/starwars.png)
 
 ## Deploying the app using heroku
 
